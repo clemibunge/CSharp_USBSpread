@@ -1,2 +1,2 @@
-import os.system;
+import os;
 os.system("test.py")
